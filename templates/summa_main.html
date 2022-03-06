@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=“en”>
+  <head>
+    <title>summarization</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  </head>
+  <body>
+    <div class="header">
+       Summarizer
+      <div class="header-right" id="up-right">
+        <img src="{{url_for('static', filename='BARITSU_Logo.png')}}"/>
+      </div>
+    </div>
+    <form action="{{ url_for('submit') }}" method="post">
+      <textarea id="field" name="text_to_short" rows="15" cols="100" placeholder="Type Here"></textarea>
+      <p>
+        <input type="radio" name="options" id="option1" value="italian" checked> italiano <br>
+        <input type="radio" name="options" id="option2" value="english"> inglese <br>
+        <input type="range" id="points" name="points" min="0" max="1" step="0.01" value="0.2" oninput="this.nextElementSibling.value = this.value"><output>0.2</output> <br>
+      </p>
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

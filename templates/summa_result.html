@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Summarization result</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  </head>
+<body>
+     <div class="header">
+       Summarizer
+      <div class="header-right" id="up-right">
+        <img src="{{url_for('static', filename='BARITSU_Logo.png')}}"/>
+      </div>
+    </div>
+     <div>
+        <textarea id="summa_out" name="text2" rows="10" cols="100">{{ output }}</textarea><br>
+         <p> {{ language }} {{ percent }}</p> <br>
+         <a href="{{ url_for('index') }}">torna alla pagina precedente</a> <br>
+     </div>
+</body>
+</html>
